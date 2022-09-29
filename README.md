@@ -34,11 +34,11 @@ git clone https://github.com/yromano/quantum_sparse_coding.git
 
 We provide Jupyter notebooks that cover a small-scale example, demonstrating the advantage of our QUBO formulation to the sparse coding problem. For demonstration purposes the code we provide runs on a classic computer. **It is important to emphasize that our QUBO problem can be minimized on quantum computers or other quantum-inspired solvers, see our paper [1] for larger-scale experiments. These are conducted on LightSolver's digital simulator [2].**
 
-Binary sparse vectors: Binary-Err-vs-NumSamples.ipynb implements the proposed method with 1-bit representation for the unknown sparse $x$. We present the estimation error obtained as a function of the sample size.
+Binary sparse vectors: `Binary-Err-vs-NumSamples.ipynb` implements the proposed method with 1-bit representation for the unknown sparse $x$. We present the estimation error obtained as a function of the sample size.
 
-2-bit sparse vectors: Two-Bit-Err-vs-Noise.ipynb implements the proposed method with 2-bit representation for the unknown sparse $x$. We present the estimation error obtained as a function of the noise level.
+2-bit sparse vectors: `Two-Bit-Err-vs-Noise.ipynb` implements the proposed method with 2-bit representation for the unknown sparse $x$. We present the estimation error obtained as a function of the noise level.
 
-The CSV files available under /results/ in the repository used to create the figures in the /figures/ folder. See /results/Plot_Graphs.py for more details.
+The CSV files available under `/results/` in the repository used to create the figures in the `/figures/` folder. See `/results/Plot_Graphs.py` for more details.
 
 [2] I. Meirzada, A. Kalinski, D. Furman, T. Armon, T. Vaknin, H. Primack, C. Tradonsky, R. Ben Shlomi, "Lightsolver---a new quantum-
 inspired solver cracks the 3-regular 3-XORSAT challenge," arXiv preprint arXiv:220709517, 2022.
