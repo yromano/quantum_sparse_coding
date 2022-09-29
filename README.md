@@ -48,41 +48,26 @@ inspired solver cracks the 3-regular 3-XORSAT challenge," arXiv preprint arXiv:2
 To generate the data used in the motivating example (Figure 1 in [1]), run the function
 
 ```
-generate_random_linear_system(
-        N, M, K,
-        type_A='low_coherence', type_x0='binary',
-        params_x0=(),
-        b_noise_coef=0,
-        seed=None)
+generate_random_linear_system(N, M, K, type_A='low_coherence', type_x0, params_x0, b_noise_coef, seed)
 ```
-from `/solvers_experiments/random_linear_system.py`. We set $N=16$, and used seed in the range 1,...,20.
+from `/solvers_experiments/random_linear_system.py`. We set $N=16$; $M$ in the range 6,...,16; $K$ in the range 1,...,4; type_A="low_coherence"; type_x0="binary"; params_x0=(); 'b_noise_coef' in the range [0.0, 0.3]; and 'seed' in the range 1,...,20.
 
 
 
 To generate the data used in the large scale 1-bit experiment (Figure 2 in [1]), run the function
 
 ```
-generate_random_linear_system(
-        N, M, K,
-        type_A='low_coherence', type_x0='binary',
-        params_x0=(),
-        b_noise_coef=0,
-        seed=None)
+generate_random_linear_system(N, M, K, type_A='low_coherence', type_x0, params_x0, b_noise_coef, seed)
 ```
-from `/solvers_experiments/random_linear_system.py`. We set $N=160$ the seed in the range 1,...,20.
+from `/solvers_experiments/random_linear_system.py`. We set $N=160$; $M$ in the range 60,...,160; $K$ in the range 10,20,30; type_A="low_coherence"; type_x0="binary"; params_x0=(); 'b_noise_coef' in the range [0.0, 0.2]; and 'seed' in the range 1,...,20.
 
 
 To generate the data used in the large scale 2-bit experiment (Figure 3 in [1]), run the function
 
 ```
-generate_random_linear_system(
-        N, M, K,
-        type_A='low_coherence', type_x0='binary',
-        params_x0=(0,1,2),
-        b_noise_coef=0,
-        seed=None)
+generate_random_linear_system(N, M, K, type_A='low_coherence', type_x0, params_x0, b_noise_coef, seed)
 ```
-from `/solvers_experiments/random_linear_system.py`. We set $N=80$ the seed in the range 1,...,20.
+from `/solvers_experiments/random_linear_system.py`. We set $N=80$; $M$ in the range 30,...,60; $K=10$; type_A="low_coherence"; type_x0="fixed_point"; params_x0=(0, 1, 2); 'b_noise_coef'$=0.1$; and 'seed' in the range 1,...,20.
 
 ## License
 
