@@ -47,7 +47,8 @@ inspired solver cracks the 3-regular 3-XORSAT challenge," arXiv preprint arXiv:2
 
 To generate the data used in the motivating example (Figure 1 in [1]), run the function
 
-```generate_random_linear_system(
+```
+generate_random_linear_system(
         N, M, K,
         type_A='low_coherence', type_x0='binary',
         params_x0=(),
@@ -60,7 +61,8 @@ from `/solvers_experiments/random_linear_system.py`. We set $N=16$, and used see
 
 To generate the data used in the large scale 1-bit experiment (Figure 2 in [1]), run the function
 
-```generate_random_linear_system(
+```
+generate_random_linear_system(
         N, M, K,
         type_A='low_coherence', type_x0='binary',
         params_x0=(),
@@ -72,7 +74,8 @@ from `/solvers_experiments/random_linear_system.py`. We set $N=160$ the seed in 
 
 To generate the data used in the large scale 2-bit experiment (Figure 3 in [1]), run the function
 
-```generate_random_linear_system(
+```
+generate_random_linear_system(
         N, M, K,
         type_A='low_coherence', type_x0='binary',
         params_x0=(0,1,2),
