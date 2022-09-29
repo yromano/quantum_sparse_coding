@@ -32,7 +32,7 @@ git clone https://github.com/yromano/quantum_sparse_coding.git
 
 ### Jupyter notebooks
 
-We provide Jupyter notebooks that cover a small-scale example, demonstrating the advantage of our QUBO formulation to the sparse coding problem. For demonstration purposes the code we provide runs on a classic computer. **It is important to emphasize that our QUBO problem can be minimized on quantum computers or other quantum-inspired solvers, see our paper [1] for larger-scale experiments. These are conducted on LightSolver's digital simulator [2].**
+We provide Jupyter notebooks that include small-scale examples to demonstrate the advantage of our QUBO approach to the sparse coding problem. For demonstration purposes the code we provide runs on a classic computer. **It is important to emphasize that the proposed QUBO problem can be minimized on quantum computers or other quantum-inspired solvers. In our paper [1] we run this approach on large-scale problems using LightSolver's digital simulator [2].**
 
 Binary sparse vectors: `Binary-Err-vs-NumSamples.ipynb` implements the proposed method with 1-bit representation for the unknown sparse $x$. We present the estimation error obtained as a function of the sample size.
 
@@ -42,6 +42,44 @@ The CSV files available under `/results/` in the repository used to create the f
 
 [2] I. Meirzada, A. Kalinski, D. Furman, T. Armon, T. Vaknin, H. Primack, C. Tradonsky, R. Ben Shlomi, "Lightsolver---a new quantum-
 inspired solver cracks the 3-regular 3-XORSAT challenge," arXiv preprint arXiv:220709517, 2022.
+
+### Generate data
+
+To generate the data used in the motivating example (Figure 1 in [1]), run the function
+
+```generate_random_linear_system(
+        N, M, K,
+        type_A='low_coherence', type_x0='binary',
+        params_x0=(),
+        b_noise_coef=0,
+        seed=None)
+```
+from `/solvers_experiments/random_linear_system.py`. We set $N=16$, and used seed in the range 1,...,20.
+
+
+
+To generate the data used in the large scale 1-bit experiment (Figure 2 in [1]), run the function
+
+```generate_random_linear_system(
+        N, M, K,
+        type_A='low_coherence', type_x0='binary',
+        params_x0=(),
+        b_noise_coef=0,
+        seed=None)
+```
+from `/solvers_experiments/random_linear_system.py`. We set $N=160$ the seed in the range 1,...,20.
+
+
+To generate the data used in the large scale 2-bit experiment (Figure 3 in [1]), run the function
+
+```generate_random_linear_system(
+        N, M, K,
+        type_A='low_coherence', type_x0='binary',
+        params_x0=(0,1,2),
+        b_noise_coef=0,
+        seed=None)
+```
+from `/solvers_experiments/random_linear_system.py`. We set $N=80$ the seed in the range 1,...,20.
 
 ## License
 
