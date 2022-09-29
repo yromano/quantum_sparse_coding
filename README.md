@@ -1,1 +1,1 @@
-# quantum_sparse_coding
+# Quantum Sparse Coding
